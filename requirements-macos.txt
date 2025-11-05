@@ -1,0 +1,34 @@
+# MediaPipe Model Maker - macOS Apple Silicon Requirements
+# Compatible with Python 3.11 and TensorFlow 2.15
+#
+# Installation order matters! See notebook cell 7 for proper installation sequence.
+# Core packages (numpy, jax, tensorflow) must be installed first via the notebook cell.
+# This file contains the remaining dependencies.
+
+# MediaPipe and related packages
+mediapipe==0.10.21
+tensorflow-addons
+tensorflow-model-optimization
+
+# TensorFlow Models Official (provides 'official' module)
+# Install without deps to avoid conflicts
+# tf-models-official (installed via notebook with --no-deps)
+
+# Required dependencies for tf-models-official
+pyyaml>=5.1
+six
+gin-config
+kaggle>=1.3.9
+py-cpuinfo>=3.3.0
+psutil>=5.4.3
+dataclasses
+
+# Other MediaPipe Model Maker dependencies
+tensorflow-datasets
+pillow
+opencv-python
+matplotlib
+scikit-learn
+scipy
+pycocotools
+absl-py
