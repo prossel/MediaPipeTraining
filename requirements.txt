@@ -1,0 +1,35 @@
+# MediaPipe Model Maker - Object Detection Training
+# Compatible with Python 3.11 on macOS (Apple Silicon)
+# 
+# Installation instructions:
+# Run cell 7 in the notebook - it handles installation automatically in the correct order
+
+# JAX with compatible ml-dtypes (MUST be installed first for TensorFlow 2.15 compatibility)
+jax[cpu]==0.4.20
+ml-dtypes==0.2.0
+
+# Core TensorFlow for macOS with GPU acceleration
+tensorflow-macos==2.15.0
+tensorflow-metal==1.1.0
+tf-keras==2.15.0
+tensorflow-hub==0.15.0
+
+# MediaPipe Model Maker (installed with --no-deps to avoid conflicts)
+mediapipe-model-maker==0.2.1.3
+
+# Supporting libraries
+tensorflow-datasets
+numpy
+pillow
+opencv-python
+matplotlib
+scikit-learn
+scipy
+pycocotools
+absl-py
+
+# Note: 
+# - JAX 0.4.20 with ml-dtypes 0.2.0 is compatible with TensorFlow 2.15.0
+# - We skip tf-models-official because tensorflow-text 2.15.0 is not available for macOS ARM
+# - mediapipe-model-maker works without tf-models-official for object detection tasks
+# - Installation order matters: JAX first, then TensorFlow, then mediapipe-model-maker
