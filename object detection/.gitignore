@@ -1,4 +1,6 @@
 dataset/
+dataset_*/
+dataset_*.zip
 flatdataset/
 exported_model/
 dataset.zip
